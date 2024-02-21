@@ -70,8 +70,7 @@
   <macro name="author">
     <names variable="author">
       <name delimiter="; " and="text" delimiter-precedes-last="never" name-as-sort-order="all">
-        <name-part name="given" initialize-with=". "/>
-        <label form="short" prefix=" (" suffix=")"/>
+        <name-part name="given"/>
       </name>
       <substitute>
         <names variable="editor"/>
