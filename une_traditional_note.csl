@@ -79,25 +79,27 @@
       </else>
     </choose>
   </macro>
-  <macro name="author">
-    <names variable="author">
-      <name name-as-sort-order="all" and="symbol" sort-separator=", " initialize-with="" delimiter=", " delimiter-precedes-last="never"/>
+<macro name="author">
+  <names variable="author">
+    <name name-as-sort-order="all" and="symbol" sort-separator=", " initialize-with="" delimiter=", " delimiter-precedes-last="never">
+      <name-part name="given" initialize-with=". "/>
       <label form="short" prefix=" (" suffix=")"/>
-      <substitute>
-        <names variable="editor"/>
-        <text macro="noauthor_title"/>
-      </substitute>
-    </names>
-    <choose>
-      <if type="motion_picture">
-        <choose>
-          <if variable="author">
-            <text term="director" form="short" prefix=" (" suffix=")"/>
-          </if>
-        </choose>
-      </if>
-    </choose>
-  </macro>
+    </name>
+    <substitute>
+      <names variable="editor"/>
+      <text macro="noauthor_title"/>
+    </substitute>
+  </names>
+  <choose>
+    <if type="motion_picture">
+      <choose>
+        <if variable="author">
+          <text term="director" form="short" prefix=" (" suffix=")"/>
+        </if>
+      </choose>
+    </if>
+  </choose>
+</macro>
   <macro name="author-note">
     <names variable="author">
       <name and="symbol" delimiter-precedes-last="never"/>
