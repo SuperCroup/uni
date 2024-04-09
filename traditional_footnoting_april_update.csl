@@ -380,7 +380,7 @@
                 <text macro="pages"/>
               </else>
             </choose>
-            <text macro="access"/>
+            <!-- text macro="access"/ -->
             <text macro="locator"/>
           </group>
         </else>
