@@ -417,7 +417,6 @@
               <text macro="issue"/>
               <text macro="year-date"/>
               <text macro="pages"/>
-              <text variable="DOI" prefix="DOI:"/>
               <text macro="access"/>
             </group>
           </group>
