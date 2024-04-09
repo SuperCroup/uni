@@ -384,6 +384,7 @@
 <text macro="issue"/>
 <text macro="year-date"/>
 <text macro="pages"/>
+<text variable="electronic-resource-num"/>
 <text macro="access"/>
 </group>
 </group>
