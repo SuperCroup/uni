@@ -335,7 +335,7 @@
             <text macro="volume"/>
             <text variable="collection-title"/>
             <text variable="number"/>
-            <text macro="publisher-place"/>
+            <!-- text macro="publisher-place"/ -->
             <text macro="issue"/>
             <text macro="date-note"/>
             <choose>
