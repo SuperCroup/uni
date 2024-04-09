@@ -335,7 +335,6 @@
             <text macro="volume"/>
             <text variable="collection-title"/>
             <text variable="number"/>
-            <text variable="publisher"/>
             <text macro="publisher-place"/>
             <text macro="issue"/>
             <text macro="date-note"/>
@@ -379,6 +378,7 @@
               <text macro="day-month-date"/>
               <text macro="volume"/>
               <text variable="collection-title"/>
+              <text variable="publisher"/>
               <text macro="publisher-place"/>
               <text macro="issue"/>
               <text macro="year-date"/>
