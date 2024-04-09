@@ -273,7 +273,8 @@
     <label variable="page" form="short" suffix=" "/>
     <text variable="page"/>
   </macro>
-  <macro name="access">
+<!--  
+<macro name="access">
     <choose>
       <if variable="URL accessed" match="all">
         <choose>
@@ -292,6 +293,39 @@
         <text variable="URL" prefix=", "/>
       </if>
     </choose>
+  </macro>
+-->
+<macro name="access">
+    <group delimiter=". ">
+      <choose>
+        <if type="graphic report" match="any">
+          <text macro="archive"/>
+        </if>
+        <else-if type="article-journal bill book chapter legal_case legislation motion_picture paper-conference" match="none">
+          <text macro="archive"/>
+        </else-if>
+      </choose>
+      <choose>
+        <if variable="issued" match="none">
+          <group delimiter=" ">
+            <text term="accessed" text-case="capitalize-first"/>
+            <date variable="accessed" form="text"/>
+          </group>
+        </if>
+      </choose>
+      <choose>
+        <if type="legal_case" match="none">
+          <choose>
+            <if variable="DOI">
+              <text variable="DOI" prefix="https://doi.org/"/>
+            </if>
+            <else>
+              <text variable="URL"/>
+            </else>
+          </choose>
+        </if>
+      </choose>
+    </group>
   </macro>
   <macro name="locator">
     <group delimiter=" ">
@@ -383,7 +417,7 @@
               <text macro="issue"/>
               <text macro="year-date"/>
               <text macro="pages"/>
-              <text variable="DOI" prefix=", DOI:"/>
+              <text variable="DOI" prefix="DOI:"/>
               <text macro="access"/>
             </group>
           </group>
